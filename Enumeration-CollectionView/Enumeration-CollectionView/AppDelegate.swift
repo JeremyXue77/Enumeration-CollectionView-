@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootVC = EnumerationViewController()
-        rootVC.view.backgroundColor = .white
+        rootVC.view.backgroundColor = .black
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         

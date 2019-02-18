@@ -11,6 +11,7 @@ import UIKit
 enum Language {
     case chinese
     case english
+    static var currentLanguage = Language.chinese
 }
 
 enum HomeSection: Int, CaseIterable {
@@ -33,7 +34,10 @@ class EnumerationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .black
+        homeCollectionView.backgroundColor = .black
         homeCollectionView.dataSource = self
+        homeCollectionView.delegate = self
         registerCollectionCell()
         getFeatures()
     }
@@ -77,24 +81,30 @@ extension EnumerationViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let homeSection = HomeSection(rawValue: indexPath.section) else { return UICollectionViewCell() }
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeSection.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeSection.identifier, for: indexPath)
         switch homeSection {
         case .logo:
-            cell = cell as! LogoUCollectionViewCell
-            return cell
+            break
         case .banner:
-            cell = cell as! BannerCollectionViewCell
-            return cell
+            if let bannerCell = cell as? BannerCollectionViewCell {
+                
+            }
         case .news:
-            cell = cell as! NewsCollectionViewCell
-            return cell
+            if let newsCell = cell as? NewsCollectionViewCell {
+                newsCell.titleLabel.text = Language.currentLanguage == .chinese ? "最新消息" : "News"
+                newsCell.contentLabel.text = Language.currentLanguage == .chinese ? "使用 Enumeration 重構您的程式碼" : "Use Enumeration to refactor your code."
+            }
         case .features:
-            cell = cell as! FeatureCollectionViewCell
-            return cell
+            if let cell = cell as? FeatureCollectionViewCell {
+                let feature = features[indexPath.row]
+                cell.update(feature: feature)
+            }
         case .languages:
-            cell = cell as! LanguageCollectionViewCell
-            return cell
+            if let languageCell = cell as? LanguageCollectionViewCell {
+                
+            }
         }
+        return cell
     }
     
 }
@@ -106,11 +116,23 @@ extension EnumerationViewController: UICollectionViewDelegateFlowLayout {
         guard let homeSection = HomeSection(rawValue: indexPath.section) else { return CGSize.zero }
         let width = collectionView.bounds.width
         switch homeSection {
-        case .logo:     return CGSize(width: width, height: 100)
-        case .banner:   return CGSize(width: width, height: 150)
-        case .news:     return CGSize(width: width, height: 80)
-        case .features: return CGSize(width: (width - 30) / 2, height: (width - 30) / 2)
-        case .languages:return CGSize(width: width, height: 50)
+        case .logo:      return CGSize(width: width, height: 100)
+        case .banner:    return CGSize(width: width, height: 200)
+        case .news:      return CGSize(width: width - 40, height: 90)
+        case .features:  return CGSize(width: (width - 50) / 2, height: (width - 50) / 2)
+        case .languages: return CGSize(width: width, height: 50)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        guard let homeSection = HomeSection(rawValue: section) else { return UIEdgeInsets.zero }
+        switch homeSection {
+        case .news:
+            return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        case .features:
+            return UIEdgeInsets(top: 0, left: 20, bottom: 10, right: 20)
+        default:
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         }
     }
     
