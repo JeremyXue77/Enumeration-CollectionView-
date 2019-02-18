@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E75E15D221A5750004D5726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75E15C221A5750004D5726 /* AppDelegate.swift */; };
-		5E75E15F221A5750004D5726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75E15E221A5750004D5726 /* ViewController.swift */; };
 		5E75E162221A5750004D5726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E75E160221A5750004D5726 /* Main.storyboard */; };
 		5E75E164221A5751004D5726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E75E163221A5751004D5726 /* Assets.xcassets */; };
 		5E75E167221A5751004D5726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E75E165221A5751004D5726 /* LaunchScreen.storyboard */; };
@@ -23,12 +22,13 @@
 		5E75E183221A60BE004D5726 /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E75E181221A60BE004D5726 /* FeatureCollectionViewCell.xib */; };
 		5E75E186221A60C9004D5726 /* LanguageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75E184221A60C9004D5726 /* LanguageCollectionViewCell.swift */; };
 		5E75E187221A60C9004D5726 /* LanguageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E75E185221A60C9004D5726 /* LanguageCollectionViewCell.xib */; };
+		5EAAEB37221A90060096AE76 /* EnumerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAAEB35221A90060096AE76 /* EnumerationViewController.swift */; };
+		5EAAEB38221A90060096AE76 /* EnumerationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAAEB36221A90060096AE76 /* EnumerationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E75E159221A5750004D5726 /* Enumeration-CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enumeration-CollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E75E15C221A5750004D5726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E75E15E221A5750004D5726 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E75E161221A5750004D5726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E75E163221A5751004D5726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E75E166221A5751004D5726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		5E75E181221A60BE004D5726 /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		5E75E184221A60C9004D5726 /* LanguageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E75E185221A60C9004D5726 /* LanguageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageCollectionViewCell.xib; sourceTree = "<group>"; };
+		5EAAEB35221A90060096AE76 /* EnumerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumerationViewController.swift; sourceTree = "<group>"; };
+		5EAAEB36221A90060096AE76 /* EnumerationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnumerationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 		5E75E16F221A5781004D5726 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5E75E15E221A5750004D5726 /* ViewController.swift */,
+				5EAAEB35221A90060096AE76 /* EnumerationViewController.swift */,
+				5EAAEB36221A90060096AE76 /* EnumerationViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				5E75E164221A5751004D5726 /* Assets.xcassets in Resources */,
 				5E75E162221A5750004D5726 /* Main.storyboard in Resources */,
 				5E75E17B221A60A3004D5726 /* BannerCollectionViewCell.xib in Resources */,
+				5EAAEB38221A90060096AE76 /* EnumerationViewController.xib in Resources */,
 				5E75E17F221A60B2004D5726 /* NewsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,12 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EAAEB37221A90060096AE76 /* EnumerationViewController.swift in Sources */,
 				5E75E182221A60BE004D5726 /* FeatureCollectionViewCell.swift in Sources */,
 				5E75E173221A5A48004D5726 /* Feature.swift in Sources */,
 				5E75E17E221A60B2004D5726 /* NewsCollectionViewCell.swift in Sources */,
 				5E75E176221A608F004D5726 /* LogoUCollectionViewCell.swift in Sources */,
 				5E75E186221A60C9004D5726 /* LanguageCollectionViewCell.swift in Sources */,
-				5E75E15F221A5750004D5726 /* ViewController.swift in Sources */,
 				5E75E17A221A60A3004D5726 /* BannerCollectionViewCell.swift in Sources */,
 				5E75E15D221A5750004D5726 /* AppDelegate.swift in Sources */,
 			);

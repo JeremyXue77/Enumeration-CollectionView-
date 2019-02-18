@@ -16,6 +16,6 @@ struct Feature {
     init(name: String, name_en: String) {
         self.name = name
         self.name_en = name_en
-        self.imageName = name_en + ".image"
+        self.imageName = name_en + " icon"
     }
 }

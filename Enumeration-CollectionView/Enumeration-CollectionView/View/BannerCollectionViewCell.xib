@@ -13,13 +13,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="gTV-IL-0wX" customClass="BannerCollectionViewCell" customModule="Enumeration_CollectionView" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-a3-Cb7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wf1-VX-MHd">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="gLM-a3-Cb7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VyI-Z8-Csw"/>
+                <constraint firstItem="gLM-a3-Cb7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fSI-uK-CrF"/>
+                <constraint firstAttribute="trailing" secondItem="gLM-a3-Cb7" secondAttribute="trailing" id="swP-YV-wRg"/>
+                <constraint firstAttribute="bottom" secondItem="gLM-a3-Cb7" secondAttribute="bottom" id="xHB-kP-RcY"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
         </collectionViewCell>
     </objects>
 </document>
