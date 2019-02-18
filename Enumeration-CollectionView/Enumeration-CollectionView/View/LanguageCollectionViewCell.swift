@@ -8,8 +8,18 @@
 
 import UIKit
 
-class LanguageCollectionViewCell: UICollectionViewCell {
+protocol LanguageCellDelegate: class {
+    func setLanguage(index: Int)
+}
 
+class LanguageCollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: LanguageCellDelegate?
+
+    @IBAction func changeLanguage(_ sender: UISegmentedControl) {
+        delegate?.setLanguage(index: sender.selectedSegmentIndex)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

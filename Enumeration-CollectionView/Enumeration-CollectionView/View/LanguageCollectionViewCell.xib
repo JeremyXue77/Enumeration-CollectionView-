@@ -26,6 +26,9 @@
                             <segment title="English"/>
                         </segments>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <action selector="changeLanguage:" destination="gTV-IL-0wX" eventType="valueChanged" id="YRd-Zs-aUV"/>
+                        </connections>
                     </segmentedControl>
                 </subviews>
             </view>

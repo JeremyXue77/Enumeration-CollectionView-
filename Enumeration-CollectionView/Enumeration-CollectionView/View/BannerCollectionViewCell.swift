@@ -10,9 +10,17 @@ import UIKit
 
 class BannerCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var bannerCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        bannerCollectionView.register(UINib(nibName: "LogoUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeSection.logo.identifier)
+        bannerCollectionView.isPagingEnabled = true
     }
-
+    
+    func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDataSource & UICollectionViewDelegate) {
+        bannerCollectionView.delegate = dataSourceDelegate
+        bannerCollectionView.dataSource = dataSourceDelegate
+        bannerCollectionView.reloadData()
+    }
 }

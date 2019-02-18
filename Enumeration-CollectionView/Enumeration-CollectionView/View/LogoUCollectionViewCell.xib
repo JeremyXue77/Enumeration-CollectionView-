@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Image" translatesAutoresizingMaskIntoConstraints="NO" id="twG-VX-e2P">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Image" translatesAutoresizingMaskIntoConstraints="NO" id="twG-VX-e2P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                     </imageView>
                 </subviews>
@@ -32,10 +32,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="417" height="127"/>
+            <connections>
+                <outlet property="logoImageView" destination="twG-VX-e2P" id="eXA-lK-s7h"/>
+            </connections>
             <point key="canvasLocation" x="279.19999999999999" y="98.950524737631198"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Logo Image" width="1000" height="333"/>
+        <image name="Logo Image" width="1200" height="600"/>
     </resources>
 </document>

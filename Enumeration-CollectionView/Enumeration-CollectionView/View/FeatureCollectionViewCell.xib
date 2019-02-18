@@ -23,17 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="glC-xg-C85">
-                                <rect key="frame" x="45" y="28" width="60" height="94"/>
+                                <rect key="frame" x="10" y="28" width="130" height="94"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple icon" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-Fs-R9s">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="35" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="63n-Sm-gQ1"/>
                                             <constraint firstAttribute="height" constant="60" id="opq-F7-VZq"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-AS-vbD">
-                                        <rect key="frame" x="2.5" y="70" width="55.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-AS-vbD">
+                                        <rect key="frame" x="37.5" y="70" width="55.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -43,8 +43,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="glC-xg-C85" secondAttribute="trailing" constant="10" id="E9m-V3-2il"/>
                             <constraint firstItem="glC-xg-C85" firstAttribute="centerY" secondItem="LA1-k1-VvY" secondAttribute="centerY" id="LL2-Rd-Ldv"/>
                             <constraint firstItem="glC-xg-C85" firstAttribute="centerX" secondItem="LA1-k1-VvY" secondAttribute="centerX" id="c1N-2e-Xqo"/>
+                            <constraint firstItem="glC-xg-C85" firstAttribute="leading" secondItem="LA1-k1-VvY" secondAttribute="leading" constant="10" id="tlJ-uS-0P0"/>
                         </constraints>
                     </view>
                 </subviews>
